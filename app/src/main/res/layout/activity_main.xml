@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="diclistadapter"
+            type="com.android.nike.ui.adapter.DictionaryListAdapter" />
+    </data>
+-->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:hint="Search"
+            />
+
+        <TextView
+            android:id="@+id/tvsortinginst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etsearch"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:text="Sort By:"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAll"
+            android:text="All"
+            android:onClick="sortAll"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toLeftOf="@+id/buttonUp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvsortinginst"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonUp"
+            android:text="Thumbs up"
+            android:onClick="sortByThumbsUp"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toLeftOf="@+id/buttonDown"
+            app:layout_constraintLeft_toRightOf="@+id/buttonAll"
+            app:layout_constraintTop_toBottomOf="@id/tvsortinginst"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDown"
+            android:text="Thumbs Down"
+            android:onClick="sortByThumbsDown"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/buttonUp"
+            app:layout_constraintTop_toBottomOf="@id/tvsortinginst"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dicListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonAll"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+
+        />
+
+        <TextView
+            android:id="@+id/tvnoresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:visibility="gone"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:text="No Results Found."
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:visibility="gone"
+            />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+<!--
+</layout>-->

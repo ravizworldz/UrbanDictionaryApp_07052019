@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.android.nike.model.DictionaryDataModel" />
+
+        <variable
+            name="rowClickListener"
+            type="com.android.nike.ui.adapter.ItemClickListener" />
+    </data>-->
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    android:padding="20dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:paddingTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="5dp"
+            android:layout_below="@id/title"
+            />
+
+        <TextView
+            android:id="@+id/thumsup"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@id/address"
+            />
+
+        <TextView
+            android:id="@+id/thumsdown"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@id/thumsup"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+<!--</layout>-->
+
