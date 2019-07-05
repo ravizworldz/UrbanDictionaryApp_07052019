@@ -1,0 +1,44 @@
+Nike Android Code Application
+Make an Urban Dictionary app:
+-         Include a text input for users to enter the term they wish to search.
+-         Show the list of resulting definitions, with number of thumbs up and thumbs down votes. Use a RecyclerView for this list.
+-         Allow users to sort by either most thumbs up or down.
+-         Show a progress indication while the Urban Dictionary API call is being made.
+-         Write at least one-unit test and one instrumented test and be prepared to talk about what other test cases you think would be beneficial to write.
+-         Document all assumptions.
+ 
+Use the API as described here: https://market.mashape.com/community/urban-dictionary.
+ 
+While this is a toy project and not a professional product, take care to demonstrate your ability to architect clean, maintainable and self-documenting code.
+ 
+Feel free to add any functionality and refinements that you feel would showcase your abilities. Some ideas:
+-          Save instance state
+-          Handle configuration changes gracefully
+-          Cache results for limited offline operation
+-          UI design, if that is a strength.
+-          Dependency injection
+
+
+
+HttpResponse<JsonNode> response = Unirest.get("https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat")
+.header("X-RapidAPI-Host", "mashape-community-urban-dictionary.p.rapidapi.com")
+.header("X-RapidAPI-Key", "cdbc447229mshdcff5b2aad3ce20p10febajsnad07737bcf8b")
+.asJson();
+
+
+https://rapidapi.com/community/api/urban-dictionary?utm_source=mashape&utm_medium=301
+
+
+
+=============================
+
+
+-	Server API have only 10 results currently, if object with same keys will increase on server then app will start showing those items on list. 
+-	Currently server do not support cache (server header have ‘no cache’) but code is implemented to handle that. 
+-	I assume not to display any screen on click on item but just to show I put a toast on click on item.
+-	UI screenshots are attached.
+-	Handle orientation 
+-	Using recycler view
+-	Using butterknife
+-	Using retrofit for network api call
+-	Using Dagger
